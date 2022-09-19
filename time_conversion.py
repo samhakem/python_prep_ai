@@ -2,7 +2,7 @@
 # h = hours, m = minutes, s = seconds
 
 duration = 54384
-h = duration / 60 / 60  # Hours - compute hours fully contained in duration, no remainder using integer division //
+h = duration // 3600  # Hours - compute hours fully contained in duration, no remainder using integer division //
 
 print(h)  # Should be 15
 
@@ -15,4 +15,4 @@ print(total_minutes)
 print(m)
 
 # Validation
-print((h * 60 * 60) + (m + 60) + s)
+print((h * 60 * 60) + (m * 60) + s)
