@@ -45,6 +45,8 @@ diff = age - 18
 # annotation for your code
 # ■ Comments will not be executed
 
+# Look at doc strings and PEP8 guidelines
+
 # Compute the sum
 # of two numbers.
 compute = 10+5 # Add 10 and 5

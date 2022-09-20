@@ -19,3 +19,7 @@ print('Value of var: ', var)
 print('Hello', 'Delineator', sep='_')
 
 print('Hello', 'Line', 'Break', 'My Old', 'Friend', sep='\n')
+
+print('First line.', end=' ')
+print('Still the first line.')
+print('Second line.')
