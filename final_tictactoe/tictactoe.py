@@ -20,12 +20,12 @@ def play_game():
 
         if turn == PLAYER_X:
             print(f"Player {turn}:")
-            position = random_bot(board, turn)
+            position = my_bot(board, turn)
         else:
             # uncomment line 26 and comment line 27 and 28 to let your bot play against the random bot
-            # position = my_bot(board, turn)
-            user_in = input(f"Player {turn}, place your piece: ")
-            position = valid_move(user_in, board)
+            position = random_bot(board, turn)
+            # user_in = input(f"Player {turn}, place your piece: ")
+            # position = valid_move(user_in, board)
 
         if position == -1:
             print("Invalid move.")

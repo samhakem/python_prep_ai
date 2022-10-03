@@ -1,3 +1,4 @@
+import copy
 import random
 
 from game_functions import *
@@ -15,7 +16,16 @@ def my_bot(board, current_player):
     # Hint: You maybe want to use some of the functions you see imported in line 3.
     # We did not cover imports in the lecture, for now you just have to know that you can simply call them here
     # e.g get_valid_moves(board) returns a list with all valid moves
-
+    def select_move(self, board):
+        candidates = board.get_valid_moves()
+        for i in range(len(candidates)):
+            row = candidates[i][0]
+            col = candidates[i][1]
+            newboard = copy.deepcopy(board)
+            newboard,perform_move(row, col, self.player)
+            if newboard.has_winner() == self.player:
+                return [row, col]
+        return random.choice(candidates)
     # TODO return the chosen move your bot thinks is the best
     return 0
 
